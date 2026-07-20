@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T.Write ❤️</title>
+</head>
+
+<body style="background:black; color:white; text-align:center; font-family:Arial;">
+
+<h1 style="color:red;font-size:40px;font-family:Arial;">
+  ▶️ T.Write
+</h1>
+<p style="color:#ccc;font-size:18px;">
+Watch the best videos online
+</p>
+<p style="color:gray;font-size:18px;">
+Watch Nature, Islamic, Funny & Sports Videos
+</p>
+<p>Welcome to T.Write</p>
+
+<div style="display:flex;justify-content:center;">
+  <input
+    type="text"
+    id="searchBox"
+    placeholder="Search videos..."
+    style="width:70%;padding:12px;border-radius:10px 0 0 10px;font-size:16px;border:none;">
+
+  <button onclick="searchYouTube()"
+    style="padding:12px 15px;border:none;border-radius:0 10px 10px 0;">
+    🔍
+    
+  </button>
+</div>
+
+
+
+<br><br>
+
+<a href="https://www.youtube.com/results?search_query=nature+videos" target="_blank">
+  <button>Nature</button>
+</a>
+<a href="https://www.youtube.com/results?search_query=islamic+videos" target="_blank">
+  <button>Islamic</button>
+</a>
+<a href="https://www.youtube.com/results?search_query=funny+videos" target="_blank">
+  <button>Funny</button>
+</a>
+<a href="https://www.youtube.com/results?search_query=sports+videos" target="_blank">
+  <button>Sports</button>
+</a>
+
+<br><br>
+
+<a href="https://www.youtube.com/" target="_blank">
+<button style="background:red;color:white;padding:15px 40px;border:none;border-radius:10px;font-size:20px;">
+Start Watching
+</button>
+</a>
+
+<br><br>
+<div style="background:#222;color:white;padding:15px;border-radius:10px;margin:10px;">
+
+<a href="https://www.youtube.com/results?search_query=nature+videos" target="_blank">
+  <img src="nature.jpg" style="width:100%;max-width:300px;height:180px;object-fit:cover;border-radius:10px;cursor:pointer;">
+</a>
+
+<br><br>
+
+<b>🌿 Nature Videos</b>
+
+</div>
+
+</div>
+
+<div style="background:#222;color:white;padding:15px;border-radius:10px;margin:10px;">
+
+<a href="https://www.youtube.com/results?search_query=islamic+videos" target="_blank">
+  <img src="islamic.jpg" style="width:100%;max-width:300px;height:180px;object-fit:cover;border-radius:10px;cursor:pointer;">
+</a>
+
+<br><br>
+
+<b>🕌 Islamic Videos</b>
+
+</div>
+</div>
+
+<div style="background:#222;color:white;padding:15px;border-radius:10px;margin:10px;">
+
+<a href="https://www.youtube.com/results?search_query=funny+videos" target="_blank">
+  <img src="funny.jpg" style="width:100%;max-width:300px;height:180px;object-fit:cover;border-radius:10px;cursor:pointer;">
+</a>
+
+<br><br>
+
+<b>😂 Funny Videos</b>
+
+</div>
+<div style="background:#222;color:white;padding:15px;border-radius:10px;margin:10px;">
+
+<a href="https://www.youtube.com/results?search_query=sports+videos" target="_blank">
+  <img src="sports.jpg" style="width:100%;max-width:300px;height:180px;object-fit:cover;border-radius:10px;cursor:pointer;">
+</a>
+
+<br><br>
+
+<b>⚽ Sports Videos</b>
+
+</div>
+</div>
+
+<div id="viewer"
+onclick="this.style.display='none'"
+style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:black;justify-content:center;align-items:center;">
+<img id="bigImage" style="max-width:90%;max-height:90%;">
+</div>
+
+<script>
+function openImage(src){
+document.getElementById("viewer").style.display="flex";
+document.getElementById("bigImage").src=src;
+}
+</script>
+<script>
+function searchYouTube() {
+  let text = document.getElementById("searchBox").value;
+  window.open("https://www.youtube.com/results?search_query=" + encodeURIComponent(text), "_blank");
+}
+</script>
+<div style="position:fixed;bottom:0;left:0;width:100%;background:#111;padding:12px 0;display:flex;justify-content:space-around;border-top:1px solid #333;">
+
+<a href="#" style="color:white;text-decoration:none;">🏠<br>Home</a>
+
+<a href="#" style="color:white;text-decoration:none;">🔍<br>Search</a>
+
+<a href="#" style="color:white;text-decoration:none;">🎥<br>Videos</a>
+
+<a href="#" style="color:white;text-decoration:none;">👤<br>Profile</a>
+
+</div>
+</body>
+</html>
