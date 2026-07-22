@@ -136,19 +136,22 @@ style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;backgroun
 
 <script>
 function openImage(src){
-document.getElementById("viewer").style.display="flex";
-document.getElementById("bigImage").src=src;
+    document.getElementById("viewer").style.display = "flex";
+    document.getElementById("bigImage").src = src;
 }
-  function likeNature(button){
+
+function likeNature(button){
     let count = parseInt(button.innerText.match(/\d+/)[0]);
     count++;
     button.innerHTML = "❤️ Like (" + count + ")";
 }
-</script>
-<script>
+
 function searchYouTube() {
-  let text = document.getElementById("searchBox").value;
-  window.open("https://www.youtube.com/results?search_query=" + encodeURIComponent(text), "_blank");
+    let text = document.getElementById("searchBox").value;
+    window.open(
+        "https://www.youtube.com/results?search_query=" + encodeURIComponent(text),
+        "_blank"
+    );
 }
 </script>
 <div style="position:fixed;bottom:0;left:0;width:100%;background:#111;padding:12px 0;display:flex;justify-content:space-around;border-top:1px solid #333;">
