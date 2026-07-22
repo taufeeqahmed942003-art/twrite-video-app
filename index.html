@@ -70,7 +70,7 @@ Start Watching
 
 <b>🌿 Nature Videos</b>
   <p style="color:#aaa;">👁️ 12.5K views • 🕒 2 days ago</p>
-<button onclick="likeNature()" id="natureLike"
+<button onclick="likeNature(this)" id="natureLike"
 style="background:red;color:white;border:none;padding:8px 15px;border-radius:8px;">
 ❤️ Like (0)
 </button>
@@ -89,7 +89,7 @@ style="background:red;color:white;border:none;padding:8px 15px;border-radius:8px
 
 <b>🕌 Islamic Videos</b>
 <p style="color:#aaa;">👁️ 12.5K views • 🕒 2 days ago</p>
-<button onclick="likeNature()" id="natureLike"
+<button onclick="likeNature(this)" id="natureLike"
 style="background:red;color:white;border:none;padding:8px 15px;border-radius:8px;">
 ❤️ Like (0)
 </button>
@@ -106,7 +106,7 @@ style="background:red;color:white;border:none;padding:8px 15px;border-radius:8px
 
 <b>😂 Funny Videos</b>
 <p style="color:#aaa;">👁️ 12.5K views • 🕒 2 days ago</p>
-<button onclick="likeNature()" id="natureLike"
+<button onclick="likeNature(this)" id="natureLike"
 style="background:red;color:white;border:none;padding:8px 15px;border-radius:8px;">
 ❤️ Like (0)
 </button>
@@ -121,7 +121,7 @@ style="background:red;color:white;border:none;padding:8px 15px;border-radius:8px
 
 <b>⚽ Sports Videos</b>
 <p style="color:#aaa;">👁️ 12.5K views • 🕒 2 days ago</p>
-<button onclick="likeNature()" id="natureLike"
+<button onclick="likeNature(this)" id="natureLike"
 style="background:red;color:white;border:none;padding:8px 15px;border-radius:8px;">
 ❤️ Like (0)
 </button>
@@ -140,6 +140,11 @@ document.getElementById("viewer").style.display="flex";
 document.getElementById("bigImage").src=src;
 }
 </script>
+  function likeNature(button){
+    let count = parseInt(button.innerText.match(/\d+/)[0]);
+    count++;
+    button.innerHTML = "❤️ Like (" + count + ")";
+}
 <script>
 function searchYouTube() {
   let text = document.getElementById("searchBox").value;
