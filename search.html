@@ -42,11 +42,14 @@ Search feature will be improved soon.
 </div>
 <script>
 function searchYouTube() {
-    let text = document.querySelector("input").value;
-    window.open(
-        "https://www.youtube.com/results?search_query=" + encodeURIComponent(text),
-        "_blank"
-    );
+    var text = document.querySelector("input").value.trim();
+
+    if (text === "") {
+        alert("Please enter something to search.");
+        return;
+    }
+
+    location.href = "https://www.youtube.com/results?search_query=" + encodeURIComponent(text);
 }
 </script>
 </body>
