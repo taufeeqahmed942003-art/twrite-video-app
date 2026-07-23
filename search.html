@@ -19,7 +19,7 @@ style="width:80%;padding:12px;border-radius:10px;border:none;font-size:16px;">
 
 <br><br>
 
-<button style="background:red;color:white;padding:12px 25px;border:none;border-radius:10px;font-size:18px;">
+<button onclick="searchYouTube()" style="background:red;color:white;padding:12px 25px;border:none;border-radius:10px;font-size:18px;">
 🔍 Search
 </button>
 
@@ -40,6 +40,14 @@ Search feature will be improved soon.
 <a href="profile.html" style="color:white;text-decoration:none;">👤<br>Profile</a>
 
 </div>
-
+<script>
+function searchYouTube() {
+    let text = document.querySelector("input").value;
+    window.open(
+        "https://www.youtube.com/results?search_query=" + encodeURIComponent(text),
+        "_blank"
+    );
+}
+</script>
 </body>
 </html>
