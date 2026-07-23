@@ -1,12 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Videos - T.Write</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T.Write - Videos</title>
 </head>
-<body style="background:black;color:white;text-align:center;font-family:Arial;">
-<h1>🎥 Videos</h1>
-<p>Welcome to the Videos page.</p>
 
-<a href="index.html" style="color:cyan;">🏠 Home</a>
+<body style="background:black;color:white;font-family:Arial;text-align:center;padding-bottom:80px;">
+
+<h1 style="color:red;">🎥 T.Write Videos</h1>
+
+<p>Search your favorite videos</p>
+
+<input
+type="text"
+id="videoSearch"
+placeholder="Search videos..."
+style="width:80%;padding:12px;border-radius:10px;border:none;font-size:16px;">
+
+<br><br>
+
+<button onclick="searchVideos()"
+style="background:red;color:white;padding:12px 25px;border:none;border-radius:10px;font-size:18px;">
+🎥 Search Videos
+</button>
+
+<br><br>
+
+<div style="background:#222;padding:15px;border-radius:10px;margin:10px;">
+<h3>🌿 Nature Videos</h3>
+<button onclick="window.location.href='https://www.youtube.com/results?search_query=nature+videos'">
+Watch
+</button>
+</div>
+
+<div style="background:#222;padding:15px;border-radius:10px;margin:10px;">
+<h3>🕌 Islamic Videos</h3>
+<button onclick="window.location.href='https://www.youtube.com/results?search_query=islamic+videos'">
+Watch
+</button>
+</div>
+
+<div style="background:#222;padding:15px;border-radius:10px;margin:10px;">
+<h3>😂 Funny Videos</h3>
+<button onclick="window.location.href='https://www.youtube.com/results?search_query=funny+videos'">
+Watch
+</button>
+</div>
+
+<div style="background:#222;padding:15px;border-radius:10px;margin:10px;">
+<h3>⚽ Sports Videos</h3>
+<button onclick="window.location.href='https://www.youtube.com/results?search_query=sports+videos'">
+Watch
+</button>
+</div>
+
+<div style="position:fixed;bottom:0;left:0;width:100%;background:#111;padding:12px 0;display:flex;justify-content:space-around;border-top:1px solid #333;">
+
+<a href="index.html" style="color:white;text-decoration:none;">🏠<br>Home</a>
+
+<a href="search.html" style="color:white;text-decoration:none;">🔍<br>Search</a>
+
+<a href="videos.html" style="color:red;text-decoration:none;">🎥<br>Videos</a>
+
+<a href="profile.html" style="color:white;text-decoration:none;">👤<br>Profile</a>
+
+</div>
+
+<script>
+function searchVideos() {
+    var text = document.getElementById("videoSearch").value.trim();
+
+    if (text === "") {
+        alert("Please enter something to search.");
+        return;
+    }
+
+    location.href =
+    "https://www.youtube.com/results?search_query=" + encodeURIComponent(text);
+}
+</script>
+
 </body>
 </html>
