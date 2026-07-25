@@ -165,5 +165,14 @@ function searchYouTube() {
 
 <a href="profile.html">👤<br>Profile</a>
 </div>
+  <script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("service-worker.js")
+      .then(() => console.log("Service Worker Registered"))
+      .catch(err => console.log(err));
+  });
+}
+  </script>
 </body>
 </html>
